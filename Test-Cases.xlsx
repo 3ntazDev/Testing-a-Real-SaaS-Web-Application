@@ -1,0 +1,29 @@
+TC ID,Title,Preconditions,Steps,Test Data,Expected Result
+TC-L-01,Login with valid credentials,OrangeHRM login page is open,"Enter valid username, Enter valid password, Click Login","Username=Admin | Password=admin123",User is redirected to Dashboard
+TC-L-02,Login with invalid password,OrangeHRM login page is open,"Enter valid username, Enter invalid password, Click Login","Username=Admin | Password=wrong123","Error message 'Invalid credentials' is displayed"
+TC-L-03,Login with invalid username,OrangeHRM login page is open,"Enter invalid username, Enter valid password, Click Login","Username=wrong | Password=admin123","Error message 'Invalid credentials' is displayed"
+TC-L-04,Login with empty username,OrangeHRM login page is open,"Leave username empty, Enter password, Click Login","Username=Empty | Password=admin123","Validation message for username is displayed"
+TC-L-05,Login with empty password,OrangeHRM login page is open,"Enter username, Leave password empty, Click Login","Username=Admin | Password=Empty","Validation message for password is displayed"
+TC-L-06,Logout from system,User is logged in,"Click profile icon, Click Logout",N/A,User is redirected to login page
+
+
+
+
+TC-EMP-01,Add new employee,Admin user logged in,"Go to PIM, Click Add, Enter first name, Enter last name, Click Save","First Name=Fahad | Last Name=QA | Employee ID=1234",Employee is added successfully
+TC-EMP-02,Edit employee details,Employee exists,"Search employee, Click Edit, Change last name, Click Save","Last Name=Tester",Employee data is updated successfully
+TC-EMP-03,Delete employee,Employee exists,"Search employee, Select employee, Click Delete, Confirm","Employee ID=1234",Employee is removed from employee list
+TC-EMP-04,Add employee without first name,Admin logged in,"Go to Add Employee, Leave first name empty, Enter last name, Click Save","First Name=Empty | Last Name=QA",Validation error is displayed
+TC-EMP-05,Add employee with duplicate ID,Admin logged in,"Add employee using existing Employee ID, Click Save","Employee ID=1234",Error message displayed
+TC-EMP-06,Search existing employee,Employee exists,"Go to Employee List, Enter employee ID, Click Search","Employee ID=1234",Employee is displayed in result list
+TC-EMP-07,Cancel adding employee,Admin logged in,"Go to Add Employee, Enter data, Click Cancel","First Name=Test | Last Name=Cancel",Employee is NOT added
+
+
+
+TC-ADM-01,Add new user,Admin logged in,"Go to Admin, Click Add User, Enter details, Click Save","Username=testuser | Password=Test@123 | Role=ESS",User is created successfully
+TC-ADM-02,Edit user role,User exists,"Search user, Click Edit, Change role, Click Save","Role=Admin",User role is updated
+TC-ADM-03,Delete user,User exists,"Search user, Click Delete, Confirm","Username=testuser",User is removed
+TC-ADM-04,Add user with existing username,Admin logged in,"Add user using existing username, Click Save","Username=Admin",Error message is displayed
+TC-ADM-05,Reset user password,User exists,"Search user, Click Reset Password, Confirm",N/A,Password reset confirmation is shown
+TC-ADM-06,Verify user access restriction,ESS user exists,"Login as ESS user, Try to access Admin page","Role=ESS","Access denied message is displayed"
+
+

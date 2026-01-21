@@ -1,0 +1,47 @@
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.egg-info/
+
+# Test Reports & Logs (keep only necessary examples in repo)
+logs/
+*.log
+reports/
+*.xml
+*.html
+*.json
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+*.env
+
+# Katalon Studio
+/katalon/
+# JMeter
+/jmeter/
+# Cypress
+/cypress/videos/
+cypress/screenshots/
